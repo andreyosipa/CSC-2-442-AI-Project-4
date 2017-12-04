@@ -146,6 +146,7 @@ def willWaitExample():
 
 def irisDiscreteExample():
     data = read_datafile('iris.data.discrete.txt')
+    random.shuffle(data)
     sl = Variable("sepal length", list(set([x[0] for x in data])), 0)
     sw = Variable("sepal width", list(set([x[1] for x in data])), 1)
     pl = Variable("petal length", list(set([x[2] for x in data])), 2)
